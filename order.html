@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>طلب - صبحني</title>
+</head>
+<body>
+
+<h2>إتمام الطلب</h2>
+
+<form action="PUT_GOOGLE_FORM_LINK_HERE" method="POST">
+  <input name="entry.111111" placeholder="اسمك"><br><br>
+  <input name="entry.222222" placeholder="رقم الموبايل"><br><br>
+  <input name="entry.333333" placeholder="العنوان"><br><br>
+  <input name="entry.444444" id="product"><br><br>
+  <input name="entry.555555" placeholder="الكمية"><br><br>
+  <button type="submit">تأكيد الطلب</button>
+</form>
+
+<script>
+document.getElementById("product").value =
+  localStorage.getItem("product");
+</script>
+
+</body>
+</html>
