@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-<meta charset="UTF-8">
-<title>طلب - صبحني</title>
-</head>
-<body>
+<form action="https://formspree.io/f/maqqwobp" method="POST">
 
-<h2>إتمام الطلب</h2>
+  <input type="text" name="name" placeholder="اسمك" required>
+  <input type="tel" name="phone" placeholder="رقم الموبايل" required>
+  <input type="text" name="address" placeholder="العنوان بالتفصيل" required>
+  <input type="text" name="product" id="product" readonly>
+  <input type="number" name="quantity" placeholder="الكمية" required>
 
-<form action="https://forms.gle/kV85JZrJFhFkNxfp6" method="POST">
-  <input name="entry.1028002315" placeholder="اسمك"><br><br>
-  <input name="entry.222222" placeholder="رقم الموبايل"><br><br>
-  <input name="entry.333333" placeholder="العنوان"><br><br>
-  <input name="entry.444444" id="product"><br><br>
-  <input name="entry.555555" placeholder="الكمية"><br><br>
   <button type="submit">تأكيد الطلب</button>
 </form>
 
@@ -21,6 +13,3 @@
 document.getElementById("product").value =
   localStorage.getItem("product");
 </script>
-
-</body>
-</html>
