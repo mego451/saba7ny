@@ -5,45 +5,82 @@
 <title>صبحني - Saba7ny</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+/* خلفية عامة */
 body {
-  font-family: Arial;
-  background: #f7f7f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
   margin: 0;
+  padding: 0;
 }
+
+/* الهيدر */
 header {
-  background: #ffb703;
-  padding: 15px;
+  background: #ff7f50;
+  color: white;
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: bold;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+/* شبكة المنتجات */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-  padding: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
+
+/* كل منتج */
 .product {
   background: white;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 15px;
+  padding: 15px;
   text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+/* صورة المنتج */
 .product img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
+
+/* اسم وسعر المنتج */
+.product h3 {
+  color: #ff7f50;
+  margin: 10px 0 5px 0;
+}
+.product p {
+  font-weight: bold;
+  color: #333;
+}
+
+/* زرار الطلب */
 .product button {
-  background: #fb8500;
+  background: #ff4500;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   width: 100%;
   color: white;
-  border-radius: 8px;
-  margin-top: 8px;
   font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product button:hover {
+  background: #e63e00;
 }
 </style>
+
 </head>
 
 <body>
