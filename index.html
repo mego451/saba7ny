@@ -1,135 +1,131 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<title>صبحني - Saba7ny</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-/* خلفية عامة */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #ffecd2, #fcb69f);
-  margin: 0;
-  padding: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحت الإنشاء</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0b3d0b, #0f5a0f, #196619);
+            animation: bgAnimation 15s infinite alternate;
+        }
 
-/* الهيدر */
-header {
-  background: #ff7f50;
-  color: white;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+        @keyframes bgAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-/* شبكة المنتجات */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
+        .container {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+        }
 
-/* كل منتج */
-.product {
-  background: white;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+        h1 {
+            font-size: 6em; /* كبرنا العنوان */
+            margin: 0;
+            animation: pulse 2s infinite;
+        }
 
-.product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-}
+        p {
+            font-size: 2em; /* كبرنا الفقرة */
+            margin-top: 15px;
+            animation: fadeIn 3s infinite alternate;
+        }
 
-/* صورة المنتج */
-.product img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.12); }
+            100% { transform: scale(1); }
+        }
 
-/* اسم وسعر المنتج */
-.product h3 {
-  color: #ff7f50;
-  margin: 10px 0 5px 0;
-}
-.product p {
-  font-weight: bold;
-  color: #333;
-}
+        @keyframes fadeIn {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
 
-/* زرار الطلب */
-.product button {
-  background: #ff4500;
-  border: none;
-  padding: 10px 15px;
-  width: 100%;
-  color: white;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+        /* زر الفيسبوك */
+        .facebook-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 18px 40px;
+            font-size: 1.5em; /* كبرنا النص داخل الزر */
+            color: #fff;
+            background: linear-gradient(125deg, #2e7dff, #1b5eff);
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(46,125,50,0.6);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
 
-.product button:hover {
-  background: #e63e00;
-}
-</style>
+        .facebook-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.15);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
 
+        .facebook-btn:hover::before {
+            top: 0;
+            left: 0;
+        }
+
+        .facebook-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(46,125,50,0.9);
+        }
+
+        /* فقاعات متحركة */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 12s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0); }
+            50% { transform: translateY(50vh) scale(1); }
+            100% { transform: translateY(-10vh) scale(0); }
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <h1>تحت الإنشاء 🚧</h1>
+        <p>سوف نكون معكم قريبًا!</p>
+        <a class="facebook-btn" href="https://www.facebook.com/elmego2" target="_blank">تواصل معنا على فيسبوك</a>
+    </div>
 
-<header>☀️ صبحني - Saba7ny</header>
-
-<div class="products">
-  <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <h3>منتج 1</h3>
-    <p>50 جنيه</p>
-    <button onclick="order('منتج 1')">اطلب الآن</button>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <h3>منتج 2</h3>
-    <p>70 جنيه</p>
-    <button onclick="order('منتج 2')">اطلب الآن</button>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <h3>منتج 3</h3>
-    <p>30 جنيه</p>
-    <button onclick="order('منتج 3')">اطلب الآن</button>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <h3>منتج 4</h3>
-    <p>90 جنيه</p>
-    <button onclick="order('منتج 4')">اطلب الآن</button>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <h3>منتج 5</h3>
-    <p>40 جنيه</p>
-    <button onclick="order('منتج 5')">اطلب الآن</button>
-  </div>
-</div>
-
-<script>
-function order(product) {
-  localStorage.setItem("product", product);
-  window.location.href = "order.html";
-}
-</script>
-
+    <script>
+        for(let i=0; i<20; i++){
+            let bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            let size = Math.random()*80 + 20;
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.left = Math.random()*100 + 'vw';
+            bubble.style.animationDuration = (Math.random()*8 + 5) + 's';
+            bubble.style.animationDelay = (Math.random()*5) + 's';
+            document.body.appendChild(bubble);
+        }
+    </script>
 </body>
 </html>
