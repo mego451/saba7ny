@@ -1,1 +1,138 @@
 # saba7ny
+
+#<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>صبحني - Saba7ny</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* خلفية عامة */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  margin: 0;
+  padding: 0;
+}
+
+/* الهيدر */
+header {
+  background: #ff7f50;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* شبكة المنتجات */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* كل منتج */
+.product {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+/* صورة المنتج */
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* اسم وسعر المنتج */
+.product h3 {
+  color: #ff7f50;
+  margin: 10px 0 5px 0;
+}
+.product p {
+  font-weight: bold;
+  color: #333;
+}
+
+/* زرار الطلب */
+.product button {
+  background: #ff4500;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product button:hover {
+  background: #e63e00;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>☀️ صبحني - Saba7ny</header>
+
+<div class="products">
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>منتج 1</h3>
+    <p>50 جنيه</p>
+    <button onclick="order('منتج 1')">اطلب الآن</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>منتج 2</h3>
+    <p>70 جنيه</p>
+    <button onclick="order('منتج 2')">اطلب الآن</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>منتج 3</h3>
+    <p>30 جنيه</p>
+    <button onclick="order('منتج 3')">اطلب الآن</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>منتج 4</h3>
+    <p>90 جنيه</p>
+    <button onclick="order('منتج 4')">اطلب الآن</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>منتج 5</h3>
+    <p>40 جنيه</p>
+    <button onclick="order('منتج 5')">اطلب الآن</button>
+  </div>
+</div>
+
+<script>
+function order(product) {
+  localStorage.setItem("product", product);
+  window.location.href = "order.html";
+}
+</script>
+
+</body>
+</html>
+#
